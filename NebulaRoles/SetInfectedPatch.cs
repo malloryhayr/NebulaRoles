@@ -9,7 +9,7 @@ using static NebulaRoles.NebulaLogic;
 namespace NebulaRoles
 {
     [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.RpcSetInfected))]
-    class SetInfectedPatch
+    public static class SetInfectedPatch
     {
         public static void Postfix(Il2CppReferenceArray<GameData.PlayerInfo> JPGEIBIBJPJ)
         {

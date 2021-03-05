@@ -4,7 +4,7 @@ using static NebulaRoles.NebulaLogic;
 namespace NebulaRoles
 {
     [HarmonyPatch(typeof(IntroCutscene.CoBegin__d), nameof(IntroCutscene.CoBegin__d.MoveNext))]
-    public class IntroCutscenePatch
+    public static class IntroCutscenePatch
     {
         static bool Prefix(IntroCutscene.CoBegin__d __instance)
         {

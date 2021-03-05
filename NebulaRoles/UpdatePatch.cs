@@ -12,6 +12,7 @@ namespace NebulaRoles
         {
             static void Postfix(HudManager __instance)
             {
+                
                 Main.Logic.ClearJesterTasks();
                 
                 var roles = new List<(string roleName, Color color)>()
