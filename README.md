@@ -11,6 +11,7 @@ Work-in-progress roles mod for Among Us, inspired by Ottomated's roles
 - [ ] Guardian
 - [ ] Snitch
 - [ ] Morphling
+- [ ] Phantom
 
 **Dependencies**: \
 [Reactor-Essentials](https://github.com/DorCoMaNdO/Reactor-Essentials/releases)
