@@ -77,8 +77,6 @@ namespace NebulaRoles
             CustomOption.AddString("Snitch", "  [F2F459FF]Snitch [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
         public static CustomStringOption MorphlingRole = 
             CustomOption.AddString("Morphling", "  [754EBCFF]Morphling [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
-        public static CustomNumberOption SheriffKillCooldown =
-            CustomOption.AddNumber("SheriffCD", "Sheriff Kill Cooldown", 30f, 10f, 60f, 2.5f);
 
         public override void Load()
         {

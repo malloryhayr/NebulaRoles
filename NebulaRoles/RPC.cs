@@ -6,7 +6,7 @@ using static NebulaRoles.NebulaLogic;
 
 namespace NebulaRoles
 {
-    enum RPC
+    public enum RPC
     {
         PlayAnimation = 0,
         CompleteTask = 1,
@@ -40,8 +40,8 @@ namespace NebulaRoles
         SetTasks = 29,
         UpdateGameData = 30,
     }
-    
-    enum CustomRPC
+
+    public enum CustomRPC
     {
         SetGodfather = 43,
         SetJanitor = 44,
@@ -117,9 +117,6 @@ namespace NebulaRoles
                     jester.Revive();
                     jester.Data.IsDead = false;
                     jester.Data.IsImpostor = true;
-                    break;
-                case (byte) CustomRPC.SetSheriff:
-                    setRole("Sheriff");
                     break;
             }
         }

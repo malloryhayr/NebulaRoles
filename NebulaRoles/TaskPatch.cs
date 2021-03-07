@@ -21,14 +21,6 @@ namespace NebulaRoles
                         __instance.myTasks.Insert(0, ImportantTasks);
                         break;
                     }
-                    case "Sheriff":
-                    {
-                        ImportantTextTask ImportantTasks = new GameObject("SheriffTasks").AddComponent<ImportantTextTask>();
-                        ImportantTasks.transform.SetParent(__instance.transform, false);
-                        ImportantTasks.Text = "[38FFDBFF]Shoot the [FF0000FF]Impostor[38FFDBFF].[]";
-                        __instance.myTasks.Insert(0, ImportantTasks);
-                        break;
-                    }
                 }
             }
         }

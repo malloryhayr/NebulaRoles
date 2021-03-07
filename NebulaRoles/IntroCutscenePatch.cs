@@ -20,10 +20,6 @@ namespace NebulaRoles
         
         static void Postfix(IntroCutscene.CoBegin__d __instance)
         {
-            var sheriff = Main.Logic.GetRolePlayer("Sheriff");
-            if (sheriff != null)
-                sheriff.LastAbilityTime = DateTime.UtcNow;
-            
             switch (Main.State.LocalPlayer.GetModdedControl().Role)
             {
                 case "Jester":
@@ -32,14 +28,6 @@ namespace NebulaRoles
                     __instance.__this.Title.Color = Main.Palette.JesterColor;
                     __instance.__this.ImpostorText.Text = "Get voted out to win";
                     __instance.__this.BackgroundBar.material.color = Main.Palette.JesterColor;
-                    break;
-                }
-                case "Sheriff":
-                {
-                    __instance.__this.Title.Text = "Sheriff";
-                    __instance.__this.Title.Color = Main.Palette.SheriffColor;
-                    __instance.__this.ImpostorText.Text = "Shoot the [FF0000FF]Impostor[]";
-                    __instance.__this.BackgroundBar.material.color = Main.Palette.SheriffColor;
                     break;
                 }
             }

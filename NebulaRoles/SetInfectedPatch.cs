@@ -32,8 +32,7 @@ namespace NebulaRoles
             
             var roles = new List<(string roleName, float spawnChance, CustomRPC rpc)>()
             {
-                ("Jester", Main.Config.JesterRole, CustomRPC.SetJester),
-                ("Sheriff", Main.Config.SheriffRole, CustomRPC.SetSheriff)
+                ("Jester", Main.Config.JesterRole, CustomRPC.SetJester)
             };
 
             var rand = new Random();
