@@ -29,11 +29,11 @@ namespace NebulaRoles
             foreach (var plr in crewmates)
                 plr.GetModdedControl().Role = "Crewmate";
 
-            System.Console.WriteLine(Main.Config.JesterRole);
             
             var roles = new List<(string roleName, float spawnChance, CustomRPC rpc)>()
             {
-                ("Jester", Main.Config.JesterRole, CustomRPC.SetJester)
+                ("Jester", Main.Config.JesterRole, CustomRPC.SetJester),
+                ("Sheriff", Main.Config.SheriffRole, CustomRPC.SetSheriff)
             };
 
             var rand = new Random();

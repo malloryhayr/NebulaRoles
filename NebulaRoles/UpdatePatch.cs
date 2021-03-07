@@ -17,7 +17,8 @@ namespace NebulaRoles
                 
                 var roles = new List<(string roleName, Color color)>()
                 {
-                    ("Jester", Main.Palette.JesterColor)
+                    ("Jester", Main.Palette.JesterColor),
+                    ("Sheriff", Main.Palette.SheriffColor)
                 };
                 
                 foreach (var player in PlayerControl.AllPlayerControls)

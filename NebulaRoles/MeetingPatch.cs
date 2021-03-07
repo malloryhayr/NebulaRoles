@@ -55,6 +55,8 @@ namespace NebulaRoles
                 {
                     if (ExileController.Instance.exiled.Object.IsPlayerRole("Jester"))
                         __result = ExileController.Instance.exiled.PlayerName + " was The Jester.";
+                    else if (ExileController.Instance.exiled.Object.IsPlayerRole("Sheriff"))
+                        __result = ExileController.Instance.exiled.PlayerName + " was The Sheriff.";
                     else
                         __result = ExileController.Instance.exiled.PlayerName + " was not The Impostor.";
                     break;

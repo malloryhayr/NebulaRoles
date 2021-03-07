@@ -1,5 +1,6 @@
-﻿using System;
+﻿using Il2CppSystem;
 using System.Collections.Generic;
+using static NebulaRoles.NebulaLogic;
 
 namespace NebulaRoles
 {
@@ -45,6 +46,24 @@ namespace NebulaRoles
 
             return Math.Sqrt((refpos[0] - playerpos[0]) * (refpos[0] - playerpos[0]) +
                              (refpos[1] - playerpos[1]) * (refpos[1] - playerpos[1]));
+        }
+        
+        public static float getSheriffCD()
+        {
+            var lastAbilityTime = Main.Logic.GetRolePlayer("Sheriff").LastAbilityTime;
+            if (lastAbilityTime == null)
+            {
+                return Main.Config.SheriffCD;
+            }
+
+            var now = DateTime.UtcNow;
+            var diff = (TimeSpan) (now - lastAbilityTime);
+
+            var killCooldown = Main.Config.SheriffCD * 1000.0f;
+            if (killCooldown - (float) diff.TotalMilliseconds < 0)
+                return 0;
+
+            return (killCooldown - (float) diff.TotalMilliseconds) / 1000.0f;
         }
     }
 }

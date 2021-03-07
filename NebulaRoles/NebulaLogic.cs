@@ -74,6 +74,7 @@ namespace NebulaRoles
             public float GuardianRole { get; set; }
             public float SnitchRole { get; set; }
             public float MorphlingRole { get; set; }
+            public float SheriffCD { get; set; }
 
             public void SetConfigSettings()
             {
@@ -84,6 +85,7 @@ namespace NebulaRoles
                 this.GuardianRole = float.Parse(NebulaPlugin.GuardianRole.GetValue() + "0");
                 this.SnitchRole = float.Parse(NebulaPlugin.SnitchRole.GetValue() + "0");
                 this.MorphlingRole = float.Parse(NebulaPlugin.MorphlingRole.GetValue() + "0");
+                this.SheriffCD = NebulaPlugin.SheriffKillCooldown.GetValue();
             }
         }
         
@@ -99,6 +101,8 @@ namespace NebulaRoles
         {
             public PlayerControl PlayerControl { get; set; }
             public string Role { get; set; }
+            public DateTime? LastAbilityTime { get; set; }
+            public bool UsedAbility { get; set; }
         }
         
         public static Color VecToColor(Vector3 vec)

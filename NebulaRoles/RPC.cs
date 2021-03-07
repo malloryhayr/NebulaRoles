@@ -118,6 +118,9 @@ namespace NebulaRoles
                     jester.Data.IsDead = false;
                     jester.Data.IsImpostor = true;
                     break;
+                case (byte) CustomRPC.SetSheriff:
+                    setRole("Sheriff");
+                    break;
             }
         }
     }
