@@ -25,7 +25,7 @@ namespace NebulaRoles
         {
             static void Postfix(VersionShower __instance)
             {
-                __instance.text.Text += "\n \n \n \n[6B30BCFF]Nebula Roles v1.0.0[]\n[8E56DBFF]Created by iGalaxy[]\n \nCredits:\nCode Reference\nextraroles.net by NotHunter101\n \nOptions + Cooldown Buttons\nReactor-Essentials by DorCoMaNdO";
+                __instance.text.Text += "\n \n \n \n \n[6B30BCFF]Nebula Roles v1.0.0[]\n[8E56DBFF]Created by iGalaxy[]\n \nCredits:\nCode Reference\nextraroles.net by NotHunter101\n \nOptions + Cooldown Buttons\nReactor-Essentials by DorCoMaNdO";
             }
         }
     
@@ -39,7 +39,7 @@ namespace NebulaRoles
                 __instance.text.Text += "\n[6A737DFF]GitHub: []iGalaxyYT";
             }
         }
-        
+
         [HarmonyPatch(typeof(GameOptionsData), nameof(GameOptionsData.Method_24))]
         public static class GameOptionsDataPatch
         {
@@ -64,19 +64,21 @@ namespace NebulaRoles
         }
 
         public static CustomStringOption MafiaRoles =
-            CustomOption.AddString("Mafia", "  [FF0000FF]Mafia[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
+            CustomOption.AddString("Mafia", "  [FF0000FF]Mafia [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
         public static CustomStringOption JesterRole =
             CustomOption.AddString("Jester", "  [ED54BAFF]Jester[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
         public static CustomStringOption SheriffRole = 
-            CustomOption.AddString("Sheriff", "  [38FFDBFF]Sheriff[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
+            CustomOption.AddString("Sheriff", "  [38FFDBFF]Sheriff [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
         public static CustomStringOption DetectiveRole = 
-            CustomOption.AddString("Detective", "  [4466D1FF]Detective[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
+            CustomOption.AddString("Detective", "  [4466D1FF]Detective [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
         public static CustomStringOption GuardianRole = 
-            CustomOption.AddString("Guardian", "  [4FEF3AFF]Guardian[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
+            CustomOption.AddString("Guardian", "  [4FEF3AFF]Guardian [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
         public static CustomStringOption SnitchRole = 
-            CustomOption.AddString("Snitch", "  [F2F459FF]Snitch[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
+            CustomOption.AddString("Snitch", "  [F2F459FF]Snitch [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
         public static CustomStringOption MorphlingRole = 
-            CustomOption.AddString("Morphling", "  [754EBCFF]Morphling[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
+            CustomOption.AddString("Morphling", "  [754EBCFF]Morphling [FF0000FF]DISABLED[]", new[] {"0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"});
+        public static CustomNumberOption SheriffKillCooldown =
+            CustomOption.AddNumber("SheriffCD", "Sheriff Kill Cooldown", 30f, 10f, 60f, 2.5f);
 
         public override void Load()
         {
