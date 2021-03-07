@@ -2,6 +2,7 @@
 Work-in-progress roles mod for Among Us, inspired by Ottomated's roles
 
 **TODO:**
+- [ ] Role rework (add new roles just by extending a class)
 - [ ] Godfather
 - [ ] Janitor
 - [ ] Mafioso
